@@ -55,18 +55,67 @@ export default defineComponent({
       <div :class="$style.item">
         <p>My social medias:</p>
         <ul style="text-align: left">
-          <li>Github & Gitlab: TakitaTD</li>
+          <li>
+            <a
+              href="//github.com/TakitaTD"
+              target="_blank"
+              referrerpolicy="noref"
+              ref="anonymous"
+              >Github</a
+            >
+            &
+            <a
+              href="//gitlab.com/TakitaTD"
+              target="_blank"
+              referrerpolicy="noref"
+              ref="anonymous"
+              >Gitlab</a
+            >: TakitaTD
+          </li>
           <li>I have no other public social medias</li>
-          <li>YouTube: T-Series</li>
+          <li>
+            YouTube:
+            <a
+              href="//www.youtube.com/channel/UCq-Fj5jknLsUf-MWSy4_brA"
+              target="_blank"
+              referrerpolicy="noref"
+              ref="anonymous"
+              >T-Series</a
+            >
+          </li>
         </ul>
       </div>
       <div style="background-color: #fff; width: 3px; height: 80%" />
       <div :class="$style.item">
         <p>Favourite TV-Shows and Movies</p>
         <ul>
-          <li>Brooklyn 99</li>
-          <li>The Office (U.S)</li>
-          <li>The Midnight Gospel</li>
+          <li>
+            <a
+              href="//www.imdb.com/title/tt2467372/"
+              target="_blank"
+              referrerpolicy="noref"
+              ref="anonymous"
+              >Brooklyn 99</a
+            >
+          </li>
+          <li>
+            <a
+              href="//www.imdb.com/title/tt0386676/"
+              target="_blank"
+              referrerpolicy="noref"
+              ref="anonymous"
+              >The Office (U.S)</a
+            >
+          </li>
+          <li>
+            <a
+              href="//www.imdb.com/title/tt11639414/"
+              target="_blank"
+              referrerpolicy="noref"
+              ref="anonymous"
+              >The Midnight Gospel</a
+            >
+          </li>
         </ul>
       </div>
       <div style="background-color: #fff; width: 3px; height: 80%" />
@@ -149,6 +198,18 @@ export default defineComponent({
   .item {
     background-color: rgba(255, 255, 255, 0.05);
     padding: 1rem;
+    a {
+      text-decoration: none;
+      color: #0066cc;
+    }
+    a::after {
+      content: "";
+      transition: all 0.3s;
+      position: absolute;
+      bottom: 1%;
+      left: 0;
+      background-color: #fff;
+    }
   }
 }
 </style>
