@@ -7,12 +7,17 @@
   color: #eceff4;
 }
 
+*::selection {
+  background-color: #00000088;
+}
+
 body,
 html {
   margin: 0;
   display: flex;
   place-items: center;
   width: 100%;
+  background-color: #282d39;
   height: 100%;
 }
 *,
@@ -34,4 +39,22 @@ html {
 }
 .router-link-active {
   height: 100% !important;
+}
+
+a {
+  text-decoration: none;
+  color: #0066cc;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #0066cc99;
+}
+
+code {
+  display: inline;
+  padding-inline: 0.4rem;
+  padding-block: 0.1rem;
+  border-radius: 5px;
+  background-color: #00000088;
+  font-family: "JetBrainsMono", monospace;
 }

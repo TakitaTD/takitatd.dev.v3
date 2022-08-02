@@ -1,7 +1,7 @@
 <template>
   <nav :class="$style.NavBar">
     <ul :class="$style.nav">
-      <RouterLink to="/About/" :class="$style.navLink">
+      <RouterLink to="/About/" :class="$style.navLink" title="Link to About">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
           <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
           <path
@@ -9,7 +9,7 @@
           />
         </svg>
       </RouterLink>
-      <RouterLink to="/" :class="$style.navLink">
+      <RouterLink to="/" :class="$style.navLink" title="Link to Home">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
           <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
           <path
@@ -20,7 +20,11 @@
       </RouterLink>
 
       <!-- <li :class="`${$style.navLink}`"> -->
-      <RouterLink to="/Projects/" :class="$style.navLink">
+      <RouterLink
+        to="/Projects/"
+        :class="$style.navLink"
+        title="Link to Projects"
+      >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
           <path
@@ -35,13 +39,14 @@
 <style scoped lang="scss" module>
 .NavBar {
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 1%;
   left: 0;
   width: 100%;
   height: 4rem;
   justify-content: center;
   align-items: center;
+  z-index: 3;
   .nav {
     display: flex;
     flex-direction: row;
@@ -52,7 +57,7 @@
     width: 100%;
     height: 100%;
     justify-content: center;
-    gap: 0.75rem;
+    gap: 1rem;
     align-items: center;
     .navLink {
       display: flex;
