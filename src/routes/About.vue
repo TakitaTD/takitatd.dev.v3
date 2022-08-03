@@ -1,72 +1,25 @@
 <script lang="ts" setup>
 import { defineComponent } from "vue";
+import TechBox from "../components/TechBox.vue";
+import vueIcon from "../assets/vue.svg";
+import nextjsIcon from "../assets/nextjs.svg";
+import reactjsIcon from "../assets/reactjs.svg";
 </script>
 
 <template>
   <div :class="$style.About">
-    <div :class="$style.content">
-      <p style="font-size: 2.25rem">Here's some more info about me:</p>
-      <p>(This is scrollable)</p>
-      <p>
-        I started coding when I was 8 years old, when I was first introduced to
-        Linux.
-      </p>
-      <p>
-        In 2018, I enabled developer mode on my chromebook I bought for school.
-        I realised, that with this,<br />
-        I can use a custom operating system via Legacy Boot mode.
-      </p>
-      <p>
-        For my first custom operating system, I used
-        <a href="//galliumos.org" target="_blank">GalliumOS</a>
-      </p>
-      <p>
-        My first "real" languages were Javascript and C#.<br />
-        When making websites, I didn't use a website until I was completely
-        acclimated to using <code>document.createElement</code>
-      </p>
-      <p>
-        My first Javascript UI library was React.JS, I used React for quite a
-        long time, trying out Angular and Svelte on the way.
-      </p>
-      <p>
-        This was around the same time I actually flashed custom firmware to the
-        chromebook I bought. I put SeaBIOS and CoreBoot on my firmware. If
-        you're interested in trying this yourself, I followed
-        <a href="//mrchromebox.tech" target="_blank">Mr ChromeBox's</a>
-        tutorial
-      </p>
-      <p>
-        Most of my time spent programming after that was spent making small
-        projects that never really amounted to anything.
-      </p>
-      <p>
-        A notable project I made was a website for my YouTube channel at the
-        time. On my website, I hosted a website were I hosted some GBA ROM
-        files.
-      </p>
-      <p>
-        I also made a website where you can listen to music, I later turned it
-        into a chrome extension that got popular around my school.
-      </p>
-      <p>
-        Sadly, though coding at my school was not supported. All the I.T.
-        courses were coding with blocks (<a
-          href="//scratch.mit.edu"
-          target="_blank"
-          >Scratch</a
-        >).
-      </p>
-      <p>
-        I've always been good at computers, I got an iPad when I was 6, which is
-        either a good thing or a bad thing depending on how you looked at it,
-        but it definitely jump-started my interest in computers and coding.
-      </p>
-    </div>
-    <div :class="$style.sectwo">
+    <div :class="$style.head">
       <header :class="$style.Header">'sup, employers!</header>
-      <p>(Left): This is a bit of a history of me and coding</p>
-      <p>Current Linux Distro: Arch Linux x86_64</p>
+      <p>
+        If you're interested in hiring me here's some technologies I'm
+        comfortable/familiar with.
+      </p>
+      <!-- <p>Current Linux Distro: Arch Linux x86_64</p> -->
+    </div>
+    <div :class="$style.techs">
+      <TechBox link="//vuejs.org" name="Vue.JS" :icon="vueIcon" />
+      <TechBox link="//nextjs.org" name="Next.JS" :icon="nextjsIcon" />
+      <TechBox link="//reactjs.org" name="React.JS" :icon="reactjsIcon" />
     </div>
   </div>
 </template>
@@ -85,7 +38,7 @@ import { defineComponent } from "vue";
 <style scoped module lang="scss">
 .About {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 3rem;
@@ -94,8 +47,8 @@ import { defineComponent } from "vue";
   // outline: solid 3px #eceff4;
   border-radius: 3px;
   width: 80%;
-  height: 70%;
-  .sectwo {
+  height: 80%;
+  .head {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -110,6 +63,15 @@ import { defineComponent } from "vue";
       font-size: 4.5rem;
       // width: 70%;
     }
+  }
+  .techs {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    width: 80%;
+    min-height: 80%;
+    border-radius: 3px;
   }
   .content {
     overflow-y: scroll;
