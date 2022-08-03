@@ -22,10 +22,14 @@ defineProps<{ name: string; link: string; icon: string }>();
   aspect-ratio: 1/1;
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.15);
-  transition: background-color 0.2s, color 0.2s;
+  //   background-color: #;
+
+  transition: background-color 0.5s, color 0.5s;
   cursor: pointer;
   padding: 0.7rem;
   margin: 1rem;
+  color: #eceff4;
+
   a {
     display: flex;
     flex-direction: column;
@@ -33,7 +37,7 @@ defineProps<{ name: string; link: string; icon: string }>();
     justify-content: flex-start;
     width: 100%;
     height: 100%;
-    color: #eceff4;
+    color: currentColor;
     .icon {
       width: 80%;
       aspect-ratio: 1/1;
@@ -48,6 +52,6 @@ defineProps<{ name: string; link: string; icon: string }>();
   }
 }
 .TechBox:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 </style>
