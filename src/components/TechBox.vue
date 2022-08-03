@@ -20,7 +20,7 @@ defineProps<{ name: string; link: string; icon: string }>();
   min-height: 60%;
   max-height: 80%;
   aspect-ratio: 1/1;
-  border-radius: 4px;
+  border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.15);
   //   background-color: #;
 

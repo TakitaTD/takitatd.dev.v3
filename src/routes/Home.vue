@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { defineComponent } from "vue";
-import Valknut from "../components/Valknut.vue";
 </script>
 <script lang="ts">
 export default defineComponent({
@@ -158,6 +157,7 @@ export default defineComponent({
     font-family: "JetBrainsMono-SemiBold", sans-serif;
     justify-content: space-between;
     align-items: center;
+    // gap: %;
     .icon {
       display: flex;
       justify-content: center;
@@ -224,5 +224,9 @@ export default defineComponent({
       background-color: rgba(255, 255, 255, 0);
     }
   }
+}
+.icons {
+  display: flex;
+  width: 100%;
 }
 </style>
