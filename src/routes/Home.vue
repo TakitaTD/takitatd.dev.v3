@@ -15,24 +15,29 @@ export default defineComponent({
 <template>
   <div :class="$style.Home">
     <div style="width: 100%; display: flex; flex-direction: row; height: 60%">
-      <img :class="$style.icon" src="../assets/yuki.gif" />
+      <img
+        :class="$style.icon"
+        src="@/assets/yuki.gif"
+        alt="Person typing fast lol"
+        title="Yuki typing"
+      />
       <div :class="$style.body">
         <header :class="$style.Header">👋 TakitaTD.dev</header>
         <div :class="$style.description">
           <p>
-            Hello, World! I am TakitaTD. A young programmer who loves open
-            source, and Linux.
+            Hello, World! I am TakitaTD. A programmer who loves open source,
+            stackoverflow, and Linux.
           </p>
           <p>
             I've been programming since I was 8 years old, writing TypeScript
             and drinking
             <span
-              @click="(e: any) => {if(e.target.textContent === 'milk') {
+              @click="(e: any) => {if(e.target.textContent === 'milk' || e.target.textContent === 'molk') {
                 e.target.textContent = '🥛'
                 milk()
             }
             else {
-                e.target.textContent = 'milk'
+                e.target.textContent = 'molk'
             }}"
               >milk</span
             >
@@ -41,8 +46,6 @@ export default defineComponent({
       </div>
     </div>
     <div :class="$style['extra-content']">
-      <div style="background-color: #fff; width: 3px; height: 80%" />
-
       <div :class="$style.item">
         <p>My favourite programming languages:</p>
         <ol style="text-align: left">
@@ -51,7 +54,6 @@ export default defineComponent({
           <li>C#</li>
         </ol>
       </div>
-      <div style="background-color: #fff; width: 3px; height: 80%" />
       <div :class="$style.item">
         <p>My social medias:</p>
         <ul style="text-align: left">
@@ -85,7 +87,6 @@ export default defineComponent({
           </li>
         </ul>
       </div>
-      <div style="background-color: #fff; width: 3px; height: 80%" />
       <div :class="$style.item">
         <p>Favourite TV-Shows and Movies</p>
         <ul>
@@ -118,7 +119,6 @@ export default defineComponent({
           </li>
         </ul>
       </div>
-      <div style="background-color: #fff; width: 3px; height: 80%" />
     </div>
   </div>
   <div :class="$style.divider" />
@@ -141,7 +141,7 @@ export default defineComponent({
   width: 80%;
   height: 70%;
   flex-direction: column;
-  font-family: JetBrainsMono-SemiBold, sans-serif;
+  font-family: "JetBrainsMono-SemiBold", sans-serif;
   justify-content: space-around;
   align-items: center;
   .icon {
@@ -153,7 +153,7 @@ export default defineComponent({
     background-size: 100%;
     border-radius: 5px;
     outline: solid 3px #eceff4;
-    animation: yuki 4s infinite ease-out;
+    // animation: yuki 4s infinite ease-out;
   }
   .body {
     display: flex;
@@ -169,7 +169,7 @@ export default defineComponent({
       display: flex;
       flex-direction: column;
       width: 80%;
-      font-family: JetBrainsMono, sans-serif;
+      font-family: "JetBrainsMono", sans-serif;
       margin-top: 5%;
       p {
         font-size: 1.3rem;
@@ -188,28 +188,33 @@ export default defineComponent({
 }
 .extra-content {
   width: 100%;
-  height: 40%;
+  height: 30%;
   text-align: left;
   display: flex;
   flex-direction: row;
   font-size: 1.3rem;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+  // background-color: rgba(255, 255, 255, 0.05);
   .item {
+    // width: 20%;
+    border-radius: 0.2rem;
+    outline: solid 2px #eceff4;
+
     background-color: rgba(255, 255, 255, 0.05);
-    padding: 1rem;
+    padding: 1%;
+    transition: background-color 0.2s;
     a {
       text-decoration: none;
       color: #0066cc;
+      transition: color 0.2s;
     }
-    a::after {
-      content: "";
-      transition: all 0.3s;
-      position: absolute;
-      bottom: 1%;
-      left: 0;
-      background-color: #fff;
+    a:hover {
+      color: #0066cc99;
     }
+  }
+  .item:hover {
+    background-color: rgba(255, 255, 255, 0);
   }
 }
 </style>

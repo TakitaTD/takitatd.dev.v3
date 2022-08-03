@@ -32,3 +32,6 @@ html {
   /* background-image: linear-gradient(to top right, #2e3440, #3b4252, #434c5e); */
   text-align: center;
 }
+.router-link-active {
+  height: 100% !important;
+}

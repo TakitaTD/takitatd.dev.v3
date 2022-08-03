@@ -6,9 +6,17 @@ const routes = [
     path: "/",
     component: Home,
   },
+  {
+    path: "/About/",
+    component: () => import("../routes/About.vue"),
+  },
+  {
+    path: "/Projects/",
+    component: () => import("../routes/Projects.vue"),
+  },
 ];
 
 export const router = createRouter({
-    history: createWebHistory(),
-    routes
-})
+  history: createWebHistory(),
+  routes,
+});
