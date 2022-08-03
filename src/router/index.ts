@@ -25,7 +25,7 @@ export const router = createRouter({
 
 router.beforeResolve((to, from, next) => {
   // If this isn't an initial page load.
-  if (to) {
+  if (to.path) {
     // Start the route progress bar.
     // console.log("aslkmd");
     NProgress.start();
