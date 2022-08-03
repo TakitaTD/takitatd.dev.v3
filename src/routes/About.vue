@@ -4,6 +4,12 @@ import TechBox from "../components/TechBox.vue";
 import vueIcon from "../assets/vue.svg";
 import nextjsIcon from "../assets/nextjs.svg";
 import reactjsIcon from "../assets/reactjs.svg";
+import svelteLogo from "../assets/svelteLogo.svg";
+import nuxtLogo from "../assets/nuxtLogo.svg";
+import sassLogo from "../assets/sassLogo.svg";
+import reduxLogo from "../assets/reduxLogo.svg";
+import gitIcon from "../assets/gitLogo.svg";
+import rustIcon from "../assets/rustLogo.svg";
 </script>
 
 <template>
@@ -17,9 +23,35 @@ import reactjsIcon from "../assets/reactjs.svg";
       <!-- <p>Current Linux Distro: Arch Linux x86_64</p> -->
     </div>
     <div :class="$style.techs">
-      <TechBox link="//vuejs.org" name="Vue.JS" :icon="vueIcon" />
-      <TechBox link="//nextjs.org" name="Next.JS" :icon="nextjsIcon" />
-      <TechBox link="//reactjs.org" name="React.JS" :icon="reactjsIcon" />
+      <div
+        style="
+          display: flex;
+          justify-content: space-around;
+          flex-direction: row;
+          width: 100%;
+          height: 100%;
+        "
+      >
+        <TechBox link="//vuejs.org" name="Vue.JS" :icon="vueIcon" />
+        <TechBox link="//nextjs.org" name="Next.JS" :icon="nextjsIcon" />
+        <TechBox link="//reactjs.org" name="React.JS" :icon="reactjsIcon" />
+        <TechBox link="//svelte.dev" name="Svelte" :icon="svelteLogo" />
+        <TechBox link="//nuxtjs.dev" name="Nuxt.JS" :icon="nuxtLogo" />
+      </div>
+      <div
+        style="
+          display: flex;
+          justify-content: space-around;
+          flex-direction: row;
+          width: 100%;
+          height: 100%;
+        "
+      >
+        <TechBox link="//sass-lang.com" name="Sass" :icon="sassLogo" />
+        <TechBox link="//redux.js.org" name="Redux" :icon="reduxLogo" />
+        <TechBox link="//git.org" name="Git" :icon="gitIcon" />
+        <TechBox link="//rust-lang.org" name="Rust" :icon="rustIcon" />
+      </div>
     </div>
   </div>
 </template>
@@ -66,12 +98,18 @@ import reactjsIcon from "../assets/reactjs.svg";
   }
   .techs {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-between;
+    // flex-wrap: wrap;
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.05);
     width: 80%;
     min-height: 80%;
     border-radius: 3px;
+    .break {
+      flex-basis: 100%;
+      height: 0;
+    }
   }
   .content {
     overflow-y: scroll;

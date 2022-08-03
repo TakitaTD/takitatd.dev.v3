@@ -14,17 +14,13 @@ defineProps<{ name: string; link: string; icon: string }>();
 <style scoped module lang="scss">
 .TechBox {
   display: flex;
-  float: left;
-  grid-auto-flow: column;
-  //   flex: 1;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  min-height: 30%;
-  //   min-height: 5rem;
-  //   object-fit: cover;
+  justify-content: space-between;
+  min-height: 60%;
+  max-height: 80%;
   aspect-ratio: 1/1;
-  border-radius: 3px;
+  border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.15);
   transition: background-color 0.2s, color 0.2s;
   cursor: pointer;
@@ -41,7 +37,8 @@ defineProps<{ name: string; link: string; icon: string }>();
     .icon {
       width: 80%;
       aspect-ratio: 1/1;
-      background-size: 100%;
+      background-size: contain;
+      background-position: center center;
       background-repeat: no-repeat;
     }
     .title {
